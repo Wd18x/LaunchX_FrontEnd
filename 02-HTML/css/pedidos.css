@@ -1,0 +1,83 @@
+
+:root {
+    --navegacion: rgb(0, 0, 0);
+    --primario: rgb(239, 0, 194);
+    --precio: rgb(154, 85, 228);
+    --letras: rgb(255, 255, 255);
+    --personas: rgb(0, 0, 0);
+  }
+
+/*HEAD*/
+.logo-nav {
+    width: 100%;
+    height: 90px;
+    background-color: var(--navegacion);
+    display: flex;
+    justify-content: space-around;
+  }
+  
+  .topnav {
+    display: flex;
+    align-items: center;
+  }
+  
+  .menu a {
+    color: var(--letras);
+    font-size: 20px;
+    text-transform: capitalize;
+    text-decoration: none;
+    padding: 0.7em 0.4em;
+  }
+  
+  .topnav a:hover {
+    color: var(--primario);
+    border-bottom: 7px solid var(--precio);
+    border-radius: 7px;
+  }
+
+body {
+
+    font-size: 16px;
+    font-family: sans-serif;
+}
+
+/*CONTENEDOR*/
+.content {
+    max-width: 1170px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/*TITULO*/
+.titulo {
+    text-align: center;
+    text-transform: capitalize;
+    font-weight: bold;
+    padding-top: 50px;
+}
+
+/*TABLA*/
+table {
+    width: 100%;
+    margin-top: 30px;
+    box-shadow: inset;
+}
+
+table, th, td {
+    border: 5px solid var(--precio);
+    border-collapse: collapse;
+    border-radius: 10px;
+}
+
+th, td {
+    padding: 10px;
+}
+
+th {
+    text-transform: capitalize;
+    text-align: left;
+}
+
+td {
+    text-align: left;
+}

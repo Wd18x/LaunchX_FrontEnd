@@ -1,0 +1,265 @@
+:root {
+  --navegacion: rgb(0, 0, 0);
+  --primario: rgb(239, 0, 194);
+  --precio: rgb(154, 85, 228);
+  --letras: rgb(255, 255, 255);
+  --personas: rgb(0, 0, 0);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-size: 16px;
+  font-family: sans-serif;
+}
+
+/*HEAD*/
+.logo-nav {
+  width: 100%;
+  height: 90px;
+  background-color: var(--navegacion);
+  display: flex;
+  justify-content: space-around;
+}
+
+.topnav {
+  display: flex;
+  align-items: center;
+}
+
+.menu a {
+  color: var(--letras);
+  font-size: 20px;
+  text-transform: capitalize;
+  text-decoration: none;
+  padding: 0.7em 0.4em;
+}
+
+.topnav a:hover {
+  color: var(--primario);
+  border-bottom: 7px solid var(--precio);
+  border-radius: 7px;
+}
+
+
+
+/*FONDO*/
+.content-fondo {
+  width: 100%;
+  height: 565px;
+  background-image: url('../img/Banner.jpg');
+  background-position: center;
+  background-size: cover;
+  position: relative;
+  z-index: 1;
+}
+
+/*TITULO PRINCIPAL*/
+.content-fondo h1 {
+  color: var(--letras);
+  font-size: 95px;
+  font-family: 'bebas';
+  position: absolute;
+  left: 75px;
+  top: 80px;
+}
+
+/*PARRAFO PRINCIPAL*/
+.content-fondo p {
+  color: var(--letras);
+  font-size: 60px;
+  font-weight: bold;
+  font-family: 'Bebas';
+  position: absolute;
+  left: 75px;
+  top: 250px;
+}
+
+.contenedor {
+  display: block;
+  max-width: 1260px;
+  margin: auto;
+}
+
+header .contenedor{
+  height: 100%;
+}
+
+.separador {
+  padding-top: 50px;
+}
+
+/*PASTELES Y ADORNOS*/
+.titulos {
+  font-size: 60px;
+  font-family: 'bebas';
+  text-transform: capitalize;
+  text-align: center;
+  color: var(--navegacion);
+}
+
+.productos {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  margin: 25px 25px 0;
+  padding: 25px 25px 0;
+}
+
+.productos li {
+  list-style: none;
+  text-transform: capitalize;
+}
+
+.img {
+  width: 180px;
+  height: 180px;
+}
+
+.pastel-adornos {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin: 30px 20px;
+  width: 250px;
+  height: 250px;
+  box-shadow: 0 0 20px 0 var(--precio);
+  border-radius: 50px;
+  transition: transfom .1s;
+}
+
+.pastel-adornos:hover {
+  transform: scale(1.05);
+}
+
+/*precio*/
+.precio {
+  color: var(--precio);
+}
+
+/*Personas*/
+.personas {
+  color: var(--personas);
+}
+
+/*BOON*/
+.enlace {
+  display: flex;
+  justify-content: center;
+}
+
+.enlace a {
+  color: var(--letras);
+  background-color: var(--precio);
+  font-size: 30px;
+  text-decoration: none;
+  text-transform: uppercase;
+  padding: 0.1em 1.5em;
+  border-radius: 10px;
+}
+
+/*COPYRIGHT*/
+#cinta-copy {
+  text-align: center;
+  margin-top: 25px;
+  font-size: 14px;
+  background-color: var(--navegacion);
+  color: var(--letras);
+}
+
+/*MEDIAS QUERIES*/
+@media screen and (max-width: 1200px) {
+   .content-fondo h1{
+       font-size: 90px;
+       left: 60px;
+       top: 100px;
+   }
+
+   .content-fondo p {
+       font-size: 36px;
+       left: 65px;
+   }
+}
+
+@media screen and (max-width: 992px) {
+  .content-fondo {
+      height: 500px;
+  }
+
+  .content-fondo h1{
+      font-size: 70px;
+      left: 55px;
+      top: 100px;
+  }
+
+  .content-fondo p {
+      font-size: 29px;
+      left: 58px;
+      top: 230px;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  /*BOTONES MENU*/
+  .menu {
+      display: flex;
+      flex-direction: column;
+      position: fixed;
+      left: 0;
+      top: 0;
+      width: 100%;
+      height: 43%;
+      align-items: center;
+      background-color: black;
+      overflow-y: auto;
+
+      opacity: 0;
+      pointer-events: none;
+      transition: opacity 0.3s;
+      z-index: 2;
+  }
+
+  .menu a {
+      color: var(--primario);
+      line-height: 50px;
+  }
+
+  .menu a:hover {
+      border-bottom: none;
+  }
+
+
+  .open-menu:focus:not(:focus-visible),
+  .close-menu:focus:not(:focus-visible) {
+      outline: none;
+  }
+
+  /*FONDO*/
+  .content-fondo {
+      height: 350px;
+  }
+
+  .content-fondo h1 {
+      font-size: 54px;
+      left: 45px;
+      top: 100px;
+  }
+
+  .content-fondo p {
+      font-size: 22px;
+      left: 40px;
+      top: 180px;
+  }
+
+  .img{
+      width: 180px;
+      height: 180px; 
+  }
+}
+
+
